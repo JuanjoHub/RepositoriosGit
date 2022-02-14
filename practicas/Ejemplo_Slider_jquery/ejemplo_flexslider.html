@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Slider</title>
+<link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" />
+
+	
+</head>
+
+
+<body>
+ 
+        <!-- Cabecera -->
+        <header>
+            <h1>Slider</h1>
+        </header>
+
+        <!-- Contenido -->
+        <section>
+            
+			<div class="flexslider">
+			  <ul class="slides">
+				<li>
+				  <img src="imagenes/paisaje1_jquery.png" />
+				</li>
+				<li>
+				  <img src="imagenes/paisaje2_jquery.png" />
+				</li>
+				<li>
+				  <img src="imagenes/evening.jpg" />
+				</li>
+				<li>
+				  <img src="imagenes/stones.jpg" />
+				</li>
+				<li>
+				  <img src="imagenes/waves.jpg" />
+				</li>				
+			  </ul>
+			</div>
+
+ 
+        </section>
+		
+		<!-- jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+		<!-- FlexSlider -->
+		<script defer src="jquery.flexslider-min.js"></script>		
+		
+		<script>
+		$(window).load(function() {
+		  $('.flexslider').flexslider({
+			animation: "slide",
+		  });
+		});
+		</script>
+        
+       
+</body>
+</html>

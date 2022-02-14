@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <button onclick="Animal(5)">Click aqui</button>
+    <script>
+        function Animal(edad) {
+            this.edad = edad || 0;
+            alert(this.edad);
+        }
+        var iris = new Animal(4);
+        var rufo = new Animal(6);
+        alert(iris instanceof Animal);    
+        alert(rufo.edad);
+            document.write(iris instanceof Animal); // true
+            document.write(rufo.edad); // 6
+    </script>
+
+</body>
+
+</html>

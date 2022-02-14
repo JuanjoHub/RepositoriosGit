@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class myDate extends Date {
+            constructor() {
+                super();
+            }
+
+            getFormattedDate() {
+                var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                return this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear();
+            }
+        }
+
+        function fecha(){
+            document.write(getFormattedDate());
+        }
+    </script>
+    <button onclick="fecha()">holas</button>
+
+</body>
+
+</html>

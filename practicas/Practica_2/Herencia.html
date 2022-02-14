@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Lo primero que tenemos que hacer es crear una clase, en este caso Persona*/
+        class Persona {
+            /*Instanciamos el constructor con los parámetros que quereamos (nombre, apellido, edad...)*/
+            constructor(nombre, apellido, edad) {
+                this.nombre_completo = {//dentro del constructor podemos indicar que el nombre esta compuesto por el nombre y el apellido
+                    nombre,
+                    apellido
+                };
+                this.edad = age;
+            }
+            nombreCompleto() {
+                document.write(this.nombre + this.apellido);
+            }
+        }
+
+        /*La herencia se aplica a una clase con la palabra 'extends' 'nombre_de_la_clase'
+        a la que queremos extender los atributos y los metodos  de la clase padre*/
+        class Teacher extends Persona {
+            /*La palabra extends hace que heredemos todos los atributos y los metodos de la clase padre*/
+            constructor(nombre, apellido, edad, subject, grade) {
+                //super es el constructor que llama a la clase padre, para poder añadir los atributos
+                //al constructor
+                super(nombre, apellido, edad);
+                // subject and grade son atributos especificos para la clase Teacher
+                this.subject = subject;
+                this.grade = grade;
+            }
+            /*Metodo que heredamos de Persona*/
+            nombreCompleto() {
+                document.write(this.nombre + this.apellido);
+            }
+        }
+        /*Creamos un objeto de tipo Teacher con atributos heredados de la clase padre Persona*/
+        profesor1 = new Teacher("Obi", "Wan", 35, "Maestro", "Jedi");
+    </script>
+
+</body>
+
+</html>

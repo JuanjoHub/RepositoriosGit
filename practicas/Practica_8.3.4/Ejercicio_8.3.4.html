@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://es.wikipedia.org/">Ir a wikipedia</a>
+
+    <!--
+    <script>
+        let enlace=document.querySelector("a");
+        enlace.addEventListener("click", function(ev){
+            if (confirm("¿Realmente desea abandonar la pagina?"))
+                location="https://es.wikipedia.org/";
+        });
+    </script>
+-->
+    <script>
+       /* Si ejecutamos este código en una página web, efectivamente se nos requiere confirmar la accion,
+        pero aunque no aceptemos el cuadro, la accion se lleva a cabo, porque los enlaces,por defecto
+        envian al usuario al destino. Por ello el código debería ser este:
+        */
+
+        let enlace=document.querySelector("a");
+        enlace.addEventListener("click",function(ev){
+            if(!confirm("¿Realmente desea abandonar esta página?"))
+                ev.preventDefault();
+        });
+
+    </script>
+
+</body>
+</html>

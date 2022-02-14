@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil molestiae cupiditate dolorum dolorem fugiat quidem beatae nemo quae rem aliquam voluptatum doloribus libero dicta, corrupti dolor illo quod soluta aspernatur harum odit id sed architecto doloremque cumque! Explicabo nihil veritatis quam. Vero inventore beatae quasi quisquam vitae blanditiis, ipsa quidem?</p>
+    <p>Aperiam labore tempora quisquam aut molestiae sed. Aperiam rerum tempora corporis animi voluptatibus perspiciatis eligendi, dolore cum nulla, commodi, exercitationem neque praesentium voluptas architecto esse soluta recusandae eius? Minus perspiciatis saepe adipisci neque, atque deleniti quia laborum quis et, doloremque sint rerum sequi amet iste hic repellat modi earum totam.</p>
+    <p>Officiis neque quaerat aspernatur vitae totam laboriosam impedit ex porro quos est. Magnam inventore vero unde non quaerat aperiam culpa quisquam facilis, quasi saepe ex quod quos libero debitis eligendi maiores aliquid tenetur aspernatur earum doloremque voluptatum. Quod quos magnam a ab enim in, voluptates aliquam perspiciatis ut rerum dolor.</p>
+    <p>Deserunt iure doloribus sequi odio et. Veritatis pariatur laborum quibusdam, iste, possimus id a nostrum nulla inventore neque amet dolor ex. Molestiae numquam est, illum, placeat expedita esse id consectetur voluptate atque at quas. Rerum velit, magnam enim accusantium quasi quod, et, minus vitae non suscipit odit mollitia? Est, id.</p>
+    <p>Neque eaque id doloribus, possimus, maiores eveniet voluptatem magnam ratione accusantium aliquid eligendi distinctio inventore laborum voluptates. Incidunt, voluptas obcaecati, illo repellendus asperiores quaerat aperiam, perspiciatis ullam quae deleniti temporibus vel nam. Fugiat ipsum consectetur, necessitatibus est similique excepturi ducimus, dolorum nobis dolore voluptatibus nulla nemo voluptatem incidunt deserunt? Consequuntur!</p>
+
+    <script>
+
+        document.addEventListener("mousemove", function(ev){
+
+            console.log(`screenX:${ev.screenX}, screenY:${ev.screenY}\n` +
+                        `clienteX:${ev.clientX}, clientY:${ev.clientY}\n` + 
+                         `pageX:${ev.pageX}, pageY:${ev.pageY}`);
+
+                         /*
+                         ScreenX/Y te cuenta las coordenadas de toda la pantalla, aunque minimices la pantalla
+                         clienteX/Y te cuenta las coordenadas de la pagina, sin embargo, si scrolleas no te las mide bien
+                         pageX/Y te cuenta las coordenadas perfectamente aunque scrolles hacia abajo
+                         */
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ol>
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Minus illo libero quas provident iste ullam quod quis iure?
+            Nemo voluptatibus rerum voluptas mollitia fugiat dolore,
+            modi maiores natus quibusdam blanditiis.
+        </li>
+
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Minus illo libero quas provident iste ullam quod quis iure?
+            Nemo voluptatibus rerum voluptas mollitia fugiat dolore,
+            modi maiores natus quibusdam blanditiis.
+        </li>
+
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Minus illo libero quas provident iste ullam quod quis iure?
+            Nemo voluptatibus rerum voluptas mollitia fugiat dolore,
+            modi maiores natus quibusdam blanditiis.
+        </li>
+
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Minus illo libero quas provident iste ullam quod quis iure?
+            Nemo voluptatibus rerum voluptas mollitia fugiat dolore,
+            modi maiores natus quibusdam blanditiis.
+        </li>
+
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Minus illo libero quas provident iste ullam quod quis iure?
+            Nemo voluptatibus rerum voluptas mollitia fugiat dolore,
+            modi maiores natus quibusdam blanditiis.
+        </li>
+
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Minus illo libero quas provident iste ullam quod quis iure?
+            Nemo voluptatibus rerum voluptas mollitia fugiat dolore,
+            modi maiores natus quibusdam blanditiis.
+        </li>
+
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Minus illo libero quas provident iste ullam quod quis iure?
+            Nemo voluptatibus rerum voluptas mollitia fugiat dolore,
+            modi maiores natus quibusdam blanditiis.
+        </li>
+
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Minus illo libero quas provident iste ullam quod quis iure?
+            Nemo voluptatibus rerum voluptas mollitia fugiat dolore,
+            modi maiores natus quibusdam blanditiis.
+        </li>
+
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Minus illo libero quas provident iste ullam quod quis iure?
+            Nemo voluptatibus rerum voluptas mollitia fugiat dolore,
+            modi maiores natus quibusdam blanditiis.
+        </li>
+
+    </ol>
+
+    <script>
+
+        function texto(){
+        var texto = prompt("Escribe el texto que desees");
+        var posicion;
+        if (texto != null) {
+            do {
+                posicion = prompt("Escriba la posicion del texto del 1 al 10");
+                if (posicion != null) {
+                    posicion = parseInt(Number(posicion));
+                    if (isNaN(posicion) || posicion < 1 || posicion > 10) {
+                        alert("Numero no valido");
+                    }
+                }
+            }
+            while (posicion != null && (isNaN(posicion) || posicion < 1 || posicion > 10)) {
+
+                //colocacion del texto en su posicion
+                var lista = document.getElementsByTagName("ol")[0];
+                //creamos el elemento li, que integraremos dentro de las listas
+                var nuevoElemento = document.createElement("li");
+                //ponemos el texto en negrita
+                nuevoElemento.innerHTML = texto.bold();
+                if (posicion == 10) {
+                    //si el numero es el 10 se añade al final
+                    lista.appendChild(nuevoElemento);
+                } else {
+                    //si no se añade delante de la posición indicada
+                    //Se resta uno porque se numera desde el 0
+                    let liSiguiente = lista.children[posicion - 1];
+                    lista.insertBefore(nuevoElemento, liSiguiente);
+                }
+            }
+        }
+    }
+    </script>
+
+    <button onclick="texto()">clic</button>
+
+</body>
+
+</html>
